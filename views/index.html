@@ -1,0 +1,30 @@
+<html ng-app="crypto">
+<head>
+    <script src="javascripts/vendors/angular.js"></script>
+    <script src="javascripts/vendors/angular-file-upload.js"></script>
+    <script src="javascripts/zell.crypto.app.js"></script>
+    <script src="javascripts/controller/zell.crypto.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/vendors/bootstrap.css">
+</head>
+<body>
+<div ng-controller="cryptoController">
+    <label for='pass'> Password :</label>
+    <input id='pass' type='password'>
+    <label for='path'>File or directory to Encrypt:</label>
+    <input id='path' type='file'>
+    {{uploader.isUploading}}
+
+    <input type="file" nv-file-select uploader="uploader"/><br/>
+    <ul>
+        <li ng-repeat="item in uploader.queue">
+            Name: <span ng-bind="item.file.name"></span><br/>
+            <button ng-click="item.upload()">upload</button>
+        </li>
+    </ul>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"
+             style="width: 0%;"></div>
+    </div>
+</div>
+</body>
+</html>
