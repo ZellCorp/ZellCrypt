@@ -1,0 +1,27 @@
+{
+  "name": "ZellCrypt",
+  "description": "Encryption app using Rijndael's algorithm",
+  "main": "",
+  "authors": [
+    "ZellCorp"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Rijandael",
+    "AES",
+    "cypher"
+  ],
+  "homepage": "https://github.com/ZellCorp/ZellCrypt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5",
+    "angular-file-upload": "^2.3.2"
+  }
+}
